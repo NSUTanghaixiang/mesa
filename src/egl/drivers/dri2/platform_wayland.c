@@ -1497,9 +1497,7 @@ try_damage_buffer(struct dri2_egl_surface *dri2_surf,
       const int *rect = &rects[i * 4];
 
       wl_surface_damage_buffer(dri2_surf->wl_surface_wrapper,
-                               rect[0],
-                               dri2_surf->base.Height - rect[1] - rect[3],
-                               rect[2], rect[3]);
+                               rect[0], rect[1], rect[2], rect[3]);
    }
    return EGL_TRUE;
 }
